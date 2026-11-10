@@ -92,3 +92,30 @@ main {
     border-color: #16362d;
     color: #ffffff;
 }
+.diferenciais {
+    padding: 16px 24px 32px 0;
+}
+
+.lista-diferenciais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cartao {
+    flex: 1 1 250px;
+    background-color: #ffffff;
+    padding: 24px;
+    border: 1px solid #d8e2dc;
+    border-top: 4px solid #1f493d;
+    border-radius: 8px;
+}
+
+.cartao h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.cartao p {
+    margin: 0;
+}
