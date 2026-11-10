@@ -1,0 +1,50 @@
+/* Inclui bordas e preenchimento nas medidas dos elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ed;
+    color: #243b33;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+#cabecalho {
+    background-color: #1f493d;
+    color: #ffffff;
+    padding: 24px;
+}
+
+#cabecalho h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+#cabecalho p {
+    margin: 8px 0 20px;
+}
+
+/* Menu */
+#cabecalho nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#cabecalho nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#cabecalho nav a:hover {
+    text-decoration: underline;
+}
+
+#cabecalho nav a[aria-current="page"] {
+    color: #ffd18a;
+}
