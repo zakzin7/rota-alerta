@@ -55,3 +55,40 @@ main {
 #rodape {
     padding-left: 24px;
 }
+.apresentacao {
+    padding: 32px 24px 32px 0;
+}
+
+.apresentacao h2 {
+    font-size: 28px;
+    margin: 0 0 16px;
+}
+
+.apresentacao p {
+    max-width: 650px;
+    margin-bottom: 24px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #1f493d;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: 2px solid #1f493d;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.botao-secundario {
+    background-color: transparent;
+    color: #1f493d;
+}
+
+.botao:hover {
+    background-color: #16362d;
+    border-color: #16362d;
+    color: #ffffff;
+}
