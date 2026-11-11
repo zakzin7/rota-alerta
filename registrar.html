@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rota Alerta - Registrar alerta</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <header id="cabecalho">
+      <h1><a href="index.html">RotaAlerta</a></h1>
+
+      <nav aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="ocorrencias.html">Ocorrências</a>
+        <a href="registrar.html" aria-current="page">Registrar alerta</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="apresentacao">
+        <h2>Registre um problema na estrada</h2>
+
+        <p>
+          Descreva o risco e indique onde ele está. Informe também quais
+          comunidades e acessos são afetados.
+        </p>
+      </section>
+      <form id="form-ocorrencia">
+        <fieldset>
+          <legend>Dados do problema</legend>
+
+          <div class="campo">
+            <label for="categoria">Tipo de ocorrência</label>
+            <select id="categoria" name="categoria" required>
+              <option value="">Selecione uma categoria</option>
+              <option value="buracos">Buracos e asfalto danificado</option>
+              <option value="animais">Animais soltos na pista</option>
+              <option value="obstaculos">
+                Obstáculos e passagens obstruídas
+              </option>
+              <option value="alagamentos">Alagamentos e deslizamentos</option>
+              <option value="sinalizacao">Falta de sinalização</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="perigo">Nível de perigo</label>
+            <select id="perigo" name="perigo" required>
+              <option value="">Selecione um nível</option>
+              <option value="baixo">Baixo</option>
+              <option value="moderado">Moderado</option>
+              <option value="alto">Alto</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="descricao">Descrição do problema</label>
+            <textarea
+              id="descricao"
+              name="descricao"
+              rows="4"
+              maxlength="500"
+              placeholder="Ex.: árvore caída ocupando parte da passagem."
+              required
+            ></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Onde está o problema?</legend>
+
+          <div class="campo">
+            <label for="municipio"
+              >Município e estado onde está o problema</label
+            >
+            <input
+              type="text"
+              id="municipio"
+              name="municipio"
+              placeholder="Ex.: Areia - PB"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="estrada">Estrada ou trecho</label>
+            <input
+              type="text"
+              id="estrada"
+              name="estrada"
+              placeholder="Ex.: estrada entre o centro e o Sítio Boa Vista"
+              maxlength="150"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="referencia">Ponto de referência</label>
+            <input
+              type="text"
+              id="referencia"
+              name="referencia"
+              placeholder="Ex.: depois da ponte, próximo à caixa-d’água"
+              maxlength="150"
+              required
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Impacto na comunidade</legend>
+          <p>
+            Informe a comunidade prejudicada pelo problema e o principal acesso
+            afetado.
+          </p>
+          <div class="campo">
+            <label for="comunidade">Comunidade com acesso prejudicado</label>
+            <input
+              type="text"
+              id="comunidade"
+              name="comunidade"
+              placeholder="Ex.: Sítio Boa Vista"
+              maxlength="100"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="acesso">Principal acesso afetado</label>
+            <select id="acesso" name="acesso" required>
+              <option value="">Selecione um acesso</option>
+              <option value="escola">Escola</option>
+              <option value="saude">Unidade de saúde</option>
+              <option value="producao">Escoamento da produção</option>
+              <option value="moradias">Moradias da comunidade</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="passagem">Condição da passagem relatada</label>
+            <select id="passagem" name="passagem" required>
+              <option value="">Selecione uma condição</option>
+              <option value="atencao">Sem bloqueio, mas com risco</option>
+              <option value="parcial">Passagem parcialmente bloqueada</option>
+              <option value="bloqueada">Passagem totalmente bloqueada</option>
+            </select>
+          </div>
+        </fieldset>
+        <button type="submit" class="botao">Cadastrar alerta</button>
+
+        <p id="mensagem-formulario" role="status"></p>
+      </form>
+    </main>
+
+    <footer id="rodape">
+      <p>RotaAlerta — Projeto acadêmico de Desenvolvimento Front-End.</p>
+      <p>
+        Protótipo com registros locais, sem compartilhamento entre usuários.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

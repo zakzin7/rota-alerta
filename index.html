@@ -10,9 +10,7 @@
 </head>
 <body>
     <header id="cabecalho">
-        <h1>RotaAlerta</h1>
-        <p>Informação para os caminhos do interior.</p>
-
+        <h1><a href="index.html">RotaAlerta</a></h1>
         <nav aria-label="Menu principal">
             <a href="index.html" aria-current="page">Início</a>
             <a href="ocorrencias.html">Ocorrências</a>
@@ -20,8 +18,8 @@
         </nav>
     </header>
 
-    <main>
-        <section class="apresentacao">
+    <main class="pagina-inicial">
+        <section class="apresentacao apresentacao-inicio">
             <h2>Como está o caminho até sua comunidade?</h2>
 
             <p>
@@ -32,11 +30,27 @@
             <a href="ocorrencias.html" class="botao">Consultar ocorrências</a>
             <a href="registrar.html" class="botao botao-secundario">Registrar um alerta</a>
         </section>
+        <section class="categorias">
+    <h2>Quais problemas você pode registrar?</h2>
 
+    <p>
+        Identifique o tipo de ocorrência para ajudar na consulta
+        das condições relatadas nas estradas.
+    </p>
+
+    <ul class="lista-categorias">
+        <li>Buracos e asfalto danificado</li>
+        <li>Animais soltos na pista</li>
+        <li>Obstáculos e passagens obstruídas</li>
+        <li>Alagamentos e deslizamentos</li>
+        <li>Falta de sinalização</li>
+    </ul>
+</section>
         <section class="diferenciais">
             <h2>Um olhar para quem vive no interior</h2>
            <div class="lista-diferenciais">
             <div class="cartao">
+                <img src="imagens/comunidade.png" alt="" class="icone-diferencial">
                 <h3>Comunidades afetadas</h3>
                 <p>
                     Identifique os sítios, povoados e distritos
@@ -45,6 +59,7 @@
             </div>
 
             <div class="cartao">
+                <img src="imagens/dourada.png" alt="" class="icone-diferencial">
                 <h3>Acessos essenciais</h3>
                 <p>
                     Consulte relatos sobre caminhos que levam a escolas,
@@ -53,6 +68,7 @@
             </div>
 
             <div class="cartao">
+                <img src="imagens/referencias.png" alt="" class="icone-diferencial">
                 <h3>Referências do lugar</h3>
                 <p>
                     Use referências como pontes, entradas de sítios
@@ -61,6 +77,41 @@
             </div>
            </div>
         </section>
+        <section class="como-funciona">
+    <h2>Como funciona o RotaAlerta?</h2>
+
+    <ol class="lista-passos">
+        <li>
+            <h3>Consulte os relatos</h3>
+            <p>
+                Busque ocorrências por categoria, comunidade
+                ou acesso afetado antes de planejar seu deslocamento.
+            </p>
+        </li>
+
+        <li>
+            <h3>Registre um problema</h3>
+            <p>
+                Informe o risco, o nível de perigo e a localização.
+                Acrescente um ponto de referência para identificar o trecho.
+            </p>
+        </li>
+
+        <li>
+            <h3>Informe o impacto</h3>
+            <p>
+                Indique qual comunidade e quais acessos são prejudicados,
+                como caminhos para escolas, unidades de saúde ou produção rural.
+            </p>
+        </li>
+    </ol>
+
+    <p class="aviso-prototipo">
+        Nesta versão acadêmica, os registros ficam salvos apenas
+        no navegador utilizado. Os relatos não garantem que um
+        caminho esteja seguro ou atualizado.
+    </p>
+</section>
     </main>
 
     <footer id="rodape">
