@@ -1,49 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>RotaAlerta | Ocorrências</title>
-
-    <link rel="stylesheet" href="estilo.css">
-</head>
-<body>
+<link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
     <header id="cabecalho">
-        <h1><a href="index.html">RotaAlerta</a></h1>
-        <nav aria-label="Menu principal">
-            <a href="index.html">Início</a>
-            <a href="ocorrencias.html" aria-current="page">Ocorrências</a>
-            <a href="registrar.html">Registrar alerta</a>
-        </nav>
+      <h1><a href="index.html">RotaAlerta</a></h1>
+      <nav aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="ocorrencias.html" aria-current="page">Ocorrências</a>
+        <a href="registrar.html">Registrar alerta</a>
+      </nav>
     </header>
 
     <main>
-        <section class="apresentacao">
-            <h2>Consulte as ocorrências</h2>
+      <section class="apresentacao">
+        <h2>Consulte as ocorrências</h2>
 
-            <p>
-                Consulte os riscos registrados nas estradas e veja
-                quais comunidades e acessos são afetados.
-            </p>
+        <p>
+          Consulte os riscos registrados nas estradas e veja quais comunidades e
+          acessos são afetados.
+        </p>
 
-            <a href="registrar.html" class="botao">Registrar um alerta</a>
-        </section>
+        <a href="registrar.html" class="botao">Registrar um alerta</a>
+      </section>
 
-        <section class="consulta">
-            <h2>Ocorrências registradas</h2>
+      <section class="consulta">
+        <h2>Ocorrências registradas</h2>
+<div class="filtros">
+    <div class="campo">
+        <label for="filtro-categoria">Categoria</label>
+        <select id="filtro-categoria">
+            <option value="">Todas as categorias</option>
+            <option value="buracos">Buracos</option>
+            <option value="animais">Animais na pista</option>
+            <option value="obstaculos">Obstáculos</option>
+            <option value="alagamentos">Alagamentos e deslizamentos</option>
+            <option value="sinalizacao">Falta de sinalização</option>
+        </select>
+    </div>
 
-            <p id="resumo-ocorrencias" role="status"></p>
+    <div class="campo">
+        <label for="filtro-comunidade">Comunidade</label>
+        <input
+            type="search"
+            id="filtro-comunidade"
+            placeholder="Digite o nome da comunidade"
+        >
+    </div>
 
-            <div id="lista-ocorrencias"></div>
-        </section>
+    <div class="campo">
+        <label for="filtro-acesso">Acesso afetado</label>
+        <select id="filtro-acesso">
+            <option value="">Todos os acessos</option>
+            <option value="escola">Escola</option>
+            <option value="saude">Unidade de saúde</option>
+            <option value="producao">Escoamento da produção</option>
+            <option value="moradias">Moradias da comunidade</option>
+            <option value="outro">Outro</option>
+        </select>
+    </div>
+</div>
+        <p id="resumo-ocorrencias" role="status"></p>
+
+        <div id="lista-ocorrencias"></div>
+      </section>
     </main>
-
+    <div class="faixa-rural" aria-hidden="true"></div>
     <footer id="rodape">
-        <p>RotaAlerta — Projeto acadêmico de Desenvolvimento Front-End.</p>
-        <p>Protótipo com registros locais, sem compartilhamento entre usuários.</p>
+      <p>RotaAlerta — Projeto acadêmico de Desenvolvimento Front-End.</p>
+      <p>
+        Protótipo com registros locais, sem compartilhamento entre usuários.
+      </p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
